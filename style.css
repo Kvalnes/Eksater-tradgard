@@ -2,231 +2,136 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
-
+  
   /* Bakgrundsbild och fallback-färg */
-  background-image: url("https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background02.jpg?raw=true");
+  background-image: url("https://source.unsplash.com/1600x900/?nature,garden"); /* Kan bytas ut med en av de rekommenderade */
   background-size: cover;
   background-position: center;
-  background-attachment: scroll;
-  background-color: #b8a58d; /* Om bilden inte laddas */
+  background-attachment: fixed;
+  background-color: #b8a58d;
+}
+
+/* ====== HERO-SECTION ====== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.5); /* Lägger en lätt mörk ton på bakgrunden */
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 22px;
+  margin-top: 10px;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
 /* ====== CONTAINER ====== */
 .container {
-  border: 1px solid green;
-  max-width: 800px;   /* Gör den beiga rutan smalare än 1000px */
-  width: 90%;         /* Responsiv på små skärmar */
-  margin: 50px auto;  /* 50px upp/ned, auto centrerar horisontellt */
-  padding: 20px;
-  background: #f2ead2;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
-
-/* ====== LOGGA ====== */
-.logo {
-  max-width: 300px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 50%;
+  max-width: 1000px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fdfaf3;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ====== RUBRIKER & TEXT ====== */
 h1 {
   color: #4a7729;
   font-size: 36px;
-  font-weight: bold;
-  margin-top: 0; /* Ta bort ev. extra marginal upptill */
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
-}
-
-/* ====== KONTAKT ====== */
-.contact {
-  margin-top: 20px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #4a7729;
-}
-
-/* Symboler i kontaktsektionen */
-.symbol {
-  color: #4a7729; /* Grön färg */
-}
-
-.contact a {
-  color: #4a7729;
-  text-decoration: none;
-}
-
-/* ====== SOCIALA LÄNKAR ====== */
-.social-links {
-  margin-top: 20px;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  border-radius: 5px;
-}
-
-.instagram {
-  background-color: #E4405F;
-}
-.facebook {
-  background-color: #1877F2;
-}
-
-/* ====== SLIDER (FADE) ====== */
-.image-gallery {
-  margin: 40px auto;
-  position: relative; /* Pilar kan vara absoluta mot denna */
-}
-
-/* Varje bild-lager är osynligt som standard (display: none; opacity: 0;) */
-.gallery-slide {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-/* Aktiv bild får display: block; opacity: 1; */
-.gallery-slide.active {
-  display: block;
-  opacity: 1;
-}
-
-/* Bilderna behåller proportioner och anpassar sig till containerns bredd */
-.gallery-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-}
-
-/* Pilarna */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 3px;
-  user-select: none;
-  transition: background-color 0.3s;
-}
-
-.prev {
-  left: 0;
-  border-radius: 0 3px 3px 0;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* ====== LÄNKAR UNDER SLIDER ====== */
-.links-below-slider {
-  margin-top: 20px;
-}
-
-.links-below-slider a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
-}
-
-/* Grön knapp (about) */
-.about-button {
-  background-color: #4a7729;
-  color: #fff;
-}
-
-.about-button:hover {
-  background-color: #3b5e23;
-}
-
-/* Länk med grön kant (Trädgårdsresan) */
-.external-button {
-  color: #4a7729;
-  background-color: transparent;
-  border: 2px solid #4a7729;
-  font-weight: bold;
-}
-
-.external-button:hover {
-  background-color: #4a7729;
-  color: #fff;
+  line-height: 1.6;
 }
 
 /* ====== NAVIGATION ====== */
-.main-nav ul {
-  list-style: none;      /* Ta bort punkter */
-  margin: 0;
-  padding: 0;
-  display: flex;         /* Horisontell meny */
-  justify-content: center;
-  gap: 20px;             /* Avstånd mellan länkarna */
+.main-nav {
+  background: #4a7729;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.main-nav li {
-  display: inline-block;
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .main-nav a {
-  
-  list-style: none;      /* Ta bort punkter */
   text-decoration: none;
-  color: #4a7729;        /* Exempel på grön färg */
+  color: white;
   font-size: 18px;
-  padding: 8px 12px;
+  padding: 10px 15px;
   border-radius: 5px;
+  transition: 0.3s;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  background-color: #4a7729;
-  color: #fff;
+.main-nav a:hover {
+  background: #365a20;
+}
+
+/* ====== KNAPPAR ====== */
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.button-primary {
+  background: #4a7729;
+  color: white;
+}
+
+.button-primary:hover {
+  background: #365a20;
+}
+
+.button-secondary {
+  border: 2px solid #4a7729;
+  color: #4a7729;
+  background: transparent;
+}
+
+.button-secondary:hover {
+  background: #4a7729;
+  color: white;
 }
 
 /* ====== FOOTER ====== */
 .site-footer {
-  background-color: #f2ead2; /* Samma beige som .container om du vill */
-  padding: 10px 0;
-  margin-top: 40px;
+  background: #f2ead2;
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .site-footer p {
-  margin: 0;
   color: #333;
   font-size: 16px;
-}
-
-
-/* ===== LISTOR =========== */
-
-ul {
-  list-style: none;
 }
 
