@@ -104,5 +104,124 @@
       max-height: 600px;
       margin: 0 auto;
       border-radius: 10px;
-      b
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    }
 
+    /* Pilarna */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      user-select: none;
+    }
+    .prev {
+      left: 0;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logga -->
+    <img 
+      src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" 
+      alt="Eksäter Trädgård" 
+      class="logo"
+    >
+    
+    <!-- Rubrik och beskrivning -->
+    <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
+    <p>Bland grönskande fält och blomstrande trädgårdar – en plats för inspiration och lugn.</p>
+
+    <!-- Kontaktinformation -->
+    <div class="contact">
+      📞 <strong>Kontakta oss:</strong> <a href="tel:0701234567">070-1234567</a>
+    </div>
+
+    <!-- Sociala medier -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/eksater_tradgard/" class="instagram" target="_blank">📷 Följ oss på Instagram</a>
+      <a href="https://www.facebook.com/eksatertradgard" class="facebook" target="_blank">📘 Följ oss på Facebook</a>
+    </div>
+
+    <!-- Extern länk (Trädgårdsresan) -->
+    <div class="external-link">
+      📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
+    </div>
+
+    <!-- Ny knapp till about.html -->
+    <div class="about-link">
+      <a href="about.html">Läs mer om oss</a>
+    </div>
+
+    <!-- Bildgalleri (slider) -->
+    <div class="image-gallery">
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      
+      <!-- Bild 1 -->
+      <img 
+        class="gallery-slide" 
+        src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
+        alt="Trädgårdsbild 1"
+      >
+      <!-- Bild 2 -->
+      <img 
+        class="gallery-slide" 
+        src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" 
+        alt="Trädgårdsbild 2"
+      >
+      <!-- Bild 3 -->
+      <img 
+        class="gallery-slide" 
+        src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" 
+        alt="Trädgårdsbild 3"
+      >
+      <!-- Bild 4 -->
+      <img 
+        class="gallery-slide" 
+        src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" 
+        alt="Lökodling"
+      >
+      
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- JavaScript för bildslidern -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("gallery-slide");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+</html>
