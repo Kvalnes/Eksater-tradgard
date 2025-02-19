@@ -1,224 +1,116 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eksäter Trädgård AB</title>
-    <style>
-          body {
-                background-image: url('bilder/background03.jpg');
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-                font-family: 'Georgia', serif;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-        }
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f3ead3;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-        /* Öka storleken på loggan */
-        .logo {
-            max-width: 300px; /* Ändra från 200px till 300px */
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-        }
-        h1 {
-            color: #4a7729;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        p {
-            font-size: 20px;
-            color: #333;
-        }
-        .social-links, .external-link {
-            margin-top: 20px;
-        }
-        .social-links a, .external-link a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            border-radius: 5px;
-        }
-        .instagram { background-color: #E4405F; }
-        .facebook { background-color: #1877F2; }
-        .external-link a {
-            color: #4a7729;
-            font-weight: bold;
-            background-color: transparent;
-            border: 2px solid #4a7729;
-        }
-        .contact {
-            margin-top: 20px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #4a7729;
-        }
-        .contact a {
-            color: #4a7729;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Bildgalleri */
-        .image-gallery {
-            position: relative;
-            max-width: 1000px;
-            margin: auto;
-        }
-        /* Minska bildstorleken och sätt max-höjd */
-        .gallery-slide {
-            display: none;
-            width: 80%;           /* Minska till 80% av containern */
-            height: auto;
-            max-width: 1000px;    /* Sätter bredd gräns */
-            max-height: 1200px;    /* Begränsa höjden till 500px (valfri siffra) */
-            margin: 0 auto;       /* Centrera bilden horisontellt */
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-        }
-        /* Pilarna */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;                         /* Centrera vertikalt */
-            transform: translateY(-50%);      /* Justera för att hamna mitt i bilden */
-            z-index: 1;                       /* Pilarna syns ovanpå bilderna */
-            width: auto;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 3px;
-            user-select: none;
-        }
-        .prev {
-            left: 0;
-            border-radius: 0 3px 3px 0;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        /* Valfritt: Gör pilarna mer synliga när man hovrar över galleriet */
-        .image-gallery:hover .prev,
-        .image-gallery:hover .next {
-            opacity: 1;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eksäter Trädgård AB</title>
+  <style>
+    body {
+      background-image: url('https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background02.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      background-color: #f9f5f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f2ead2; /* Jordnära beige bakgrund */
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .logo {
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+    }
+    h1 {
+      color: #4a7729;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+    .social-links, .external-link {
+      margin-top: 20px;
+    }
+    .social-links a, .external-link a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      border-radius: 5px;
+    }
+    .instagram { background-color: #E4405F; }
+    .facebook { background-color: #1877F2; }
+    .external-link a {
+      color: #4a7729;
+      font-weight: bold;
+      background-color: transparent;
+      border: 2px solid #4a7729;
+    }
+    .contact {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #4a7729;
+    }
+    .contact a {
+      color: #4a7729;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .image-gallery {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 10px;
+    }
+    .gallery-image {
+      display: block;
+      width: 80%;
+      max-width: 1000px;
+      max-height: 600px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" alt="Eksäter Trädgård" class="logo">
-        <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
-        <p>Bland grönskande fält och blomstrande trädgårdar – en plats för inspiration och lugn.</p>
+  <div class="container">
+    <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" alt="Eksäter Trädgård" class="logo">
+    <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
+    <p>Bland grönskande fält och blomstrande trädgårdar – en plats för inspiration och lugn.</p>
 
-        <div class="contact">
-            📞 <strong>Kontakta oss:</strong> <a href="tel:0701234567">070-1234567</a>
-        </div>
-
-        <div class="social-links">
-            <a href="https://www.instagram.com/eksater_tradgard/" class="instagram" target="_blank">📷 Följ oss på Instagram</a>
-            <a href="https://www.facebook.com/eksatertradgard" class="facebook" target="_blank">📘 Följ oss på Facebook</a>
-        </div>
-
-        <div class="external-link">
-            📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
-        </div>
-
-        <!--
-        <div class="image-gallery">
-            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" alt="Trädgårdsbild 1">
-            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" alt="Trädgårdsbild 2">
-            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" alt="Trädgårdsbild 3">
-            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" alt="Lökodling">
-            <button class="next" onclick="plusSlides(1)">&#10095;</button>
-        </div>
-
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function showSlides(n) {
-                let slides = document.getElementsByClassName("gallery-slide");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slides[slideIndex - 1].style.display = "block";
-            }
-
-        -->
-
-                
-            <!-- Ny lösning: Manuell bildbläddring med ett enda bild-element -->
-            <div class="image-gallery">
-              <button class="prev" onclick="showPrev()">&#10094;</button>
-              <img 
-                id="galleryImage" 
-                src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
-                alt="Bild" 
-                style="width:80%; max-height:600px; border-radius:10px; box-shadow: 0px 2px 5px rgba(0,0,0,0.2);"
-              >
-              <button class="next" onclick="showNext()">&#10095;</button>
-            </div>
-            
-            <script>
-              // Array med bild-URL:er
-              const images = [
-                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true",
-                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true",
-                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true",
-                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true"
-              ];
-              
-              let currentIndex = 0;
-              
-              // Funktion som visar en bild baserat på index
-              function showImage(index) {
-                const galleryImage = document.getElementById("galleryImage");
-                galleryImage.src = images[index];
-              }
-              
-              // Nästa bild
-              function showNext() {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage(currentIndex);
-              }
-              
-              // Föregående bild
-              function showPrev() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                showImage(currentIndex);
-              }
-            </script>
-        
-        
-        </script>
+    <div class="contact">
+      📞 <strong>Kontakta oss:</strong> <a href="tel:0701234567">070-1234567</a>
     </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/eksater_tradgard/" class="instagram" target="_blank">📷 Följ oss på Instagram</a>
+      <a href="https://www.facebook.com/eksatertradgard" class="facebook" target="_blank">📘 Följ oss på Facebook</a>
+    </div>
+
+    <div class="external-link">
+      📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
+    </div>
+
+    <div class="image-gallery">
+      <img class="gallery-image" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" alt="Trädgårdsbild 1">
+      <img class="gallery-image" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" alt="Trädgårdsbild 2">
+      <img class="gallery-image" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" alt="Trädgårdsbild 3">
+      <img class="gallery-image" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" alt="Lökodling">
+    </div>
+  </div>
 </body>
 </html>
-
