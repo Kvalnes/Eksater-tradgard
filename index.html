@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eksäter Trädgård AB</title>
+  <!-- Länka till stilmallen -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +13,6 @@
     <!-- LOGGA -->
     <img 
       src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" 
-      alt="Eksäter Trädgård" 
-      class="logo"
       alt="Eksäter Trädgård" 
       class="logo"
     >
@@ -30,26 +29,55 @@
 
     <!-- SOCIALA MEDIER -->
     <div class="social-links">
-      <a href="..." class="instagram" target="_blank">📷 Följ oss på Instagram</a>
-      <a href="..." class="facebook" target="_blank">📘 Följ oss på Facebook</a>
+      <a 
+        href="https://www.instagram.com/eksater_tradgard/" 
+        class="instagram" 
+        target="_blank"
+      >
+        📷 Följ oss på Instagram
+      </a>
+      <a 
+        href="https://www.facebook.com/eksatertradgard" 
+        class="facebook" 
+        target="_blank"
+      >
+        📘 Följ oss på Facebook
+      </a>
     </div>
 
     <!-- BILDGALLERI (FADE SLIDER) -->
     <div class="image-gallery">
+      <!-- Vänsterpil -->
       <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
 
-      
-      <div class="gallery-slide"><img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
-          alt="Trädgårdsbild 1"></div>
-      <div class="gallery-slide"><img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" 
-          alt="Trädgårdsbild 2"></div>
-      <div class="gallery-slide"><img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" 
-          alt="Trädgårdsbild 3""></div>
-      <div class="gallery-slide"><img  src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" 
-          alt="Lökodling"></div>
+      <!-- Varje bild i en egen div.gallery-slide -->
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
+          alt="Trädgårdsbild 1"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" 
+          alt="Trädgårdsbild 2"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" 
+          alt="Trädgårdsbild 3"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" 
+          alt="Lökodling"
+        >
+      </div>
 
-    </div>
-<button class="next" onclick="plusSlides(1)">&#10095;</button>
+      <!-- Högerpil -->
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
 
     <!-- KNAPPAR UNDER SLIDER -->
@@ -63,14 +91,15 @@
         Läs mer på Trädgårdsresan
       </a>
     </div>
-  </div><!-- Avslutar .container -->
 
+  </div><!-- /.container -->
 
-  <!-- SCRIPT FÖR SLIDERN -->
+  <!-- SCRIPT FÖR SLIDERN (FADE) -->
   <script>
     let slideIndex = 0;
     const slides = document.getElementsByClassName("gallery-slide");
 
+    // Visa vald slide
     function showSlide(index) {
       for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
@@ -78,15 +107,22 @@
       slides[index].classList.add("active");
     }
 
+    // Navigera i slidern
     function plusSlides(n) {
       slideIndex += n;
-      if (slideIndex >= slides.length) slideIndex = 0;
-      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
       showSlide(slideIndex);
     }
 
+    // Initiera första bilden
     showSlide(slideIndex);
   </script>
 
 </body>
 </html>
+
