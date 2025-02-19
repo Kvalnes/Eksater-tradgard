@@ -1,158 +1,172 @@
-/* ================= BODY ================= */
+/* ====== GRUNDINSTÄLLNINGAR ====== */
 body {
-    /* Samma font som i index.html-exemplen */
-    font-family: 'Georgia', serif;
-    text-align: center;
-
-    /* Bakgrundsbild + fallback-färg */
-    background-image: url('https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background.jpg?raw=true');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f5f0; /* Om bilden inte laddas */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  /* Bakgrundsbild och fallback-färg */
+  background-image: url("https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #f9f5f0; /* Om bilden inte laddas */
 }
 
-/* ================= CONTAINER ================= */
+/* ====== HUVUD-BEHÅLLARE ====== */
 .container {
-    max-width: 1000px;           /* Lite större än tidigare 900px */
-    margin: 50px auto;
-    padding: 20px;
-    background: #f2ead2;         /* Varm, beige bakgrund */
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f2ead2; /* Beige, varm bakgrund */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* ================= RUBRIKER & TEXT ================= */
+/* ====== LOGGA ====== */
+.logo {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+/* ====== RUBRIKER & TEXT ====== */
 h1 {
-    color: #4a7729;              /* Grön ton som i index.html-exemplet */
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 0;               /* Tar bort ev. extra marginal upptill */
+  color: #4a7729;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0; /* Ta bort extra marginal upptill */
 }
 
 p {
-    font-size: 20px;             /* Matchar index.html */
-    color: #333;                 /* Mörkgrå text för god kontrast */
+  font-size: 20px;
+  color: #333;
 }
 
-/* ================= NAVIGATION ================= */
-nav {
-    margin: 20px 0;
+/* ====== KONTAKT ====== */
+.contact {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4a7729;
 }
 
-nav a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    background-color: #4a7729;   /* Samma gröna ton som rubrikerna */
-    border-radius: 5px;
+.contact a {
+  color: #4a7729;
+  text-decoration: none;
 }
 
-nav a:hover {
-    background-color: #3b5e23;   /* Lite mörkare grön på hover */
-}
-
-/* ================= SOCIAL & EXTERNAL LINKS ================= */
+/* ====== SOCIALA LÄNKAR & EXTERN LÄNK ====== */
 .social-links, .external-link {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.social-links a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    border-radius: 5px;
-}
-
-.instagram {
-    background-color: #E4405F;
-}
-
-.facebook {
-    background-color: #1877F2;
-}
-
+.social-links a,
 .external-link a {
-    color: #4a7729;
-    font-weight: bold;
-    background-color: transparent;
-    border: 2px solid #4a7729;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
 }
 
-/* ================= BILDGALLERI / SLIDER ================= */
-/* (Används om du har en slider på index.html) */
+/* Instagram och Facebook */
+.instagram {
+  background-color: #E4405F;
+}
+.facebook {
+  background-color: #1877F2;
+}
 
+/* Länk till Trädgårdsresan */
+.external-link a {
+  color: #4a7729;              /* Grön text */
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid #4a7729;   /* Grön kant */
+}
+
+/* ====== SLIDER-KNAPP TILL "ABOUT" (om du vill ha en intern länk) ====== */
+.about-link {
+  margin-top: 20px;
+}
+.about-link a {
+  background-color: #4a7729;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* ====== SLIDER (FADE-EFFEKT) ====== */
 .image-gallery {
-    position: relative;
-    max-width: 1000px;
-    margin: 40px auto;
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  min-height: 500px; /* Hindrar layout-hopp om bilder varierar i höjd */
 }
 
-/* Bilderna i slidern */
+/* Varje bild-lager (slide) placeras ovanpå varandra */
 .gallery-slide {
-    position: absolute;
-      top: 0; 
-      left: 0; 
-      right: 0;
-      margin: auto;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out; /* Här sker själva fade-övergången */
-      width: 80%;               /* Justera efter din design */
-      max-width: 1000px;
-      border-radius: 10px;
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
 }
 
+/* Aktiv bild får opacity=1 (synlig) */
 .gallery-slide.active {
   opacity: 1;
   z-index: 1;
 }
 
-/* Bilderna i varje slide: se till att de inte blir ihopklämda */
+/* Själva bilden inuti varje slide */
 .gallery-slide img {
-  width: 100%;    /* Bilden tar upp all tillgänglig bredd */
-  height: auto;   /* Behåller bildens proportioner */
-  display: block; /* Tar bort default inline-beteende */
+  width: 100%;
+  height: auto; /* Behåll proportioner */
+  display: block;
+  border-radius: 10px;
 }
 
 /* Pilarna */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-    user-select: none;
-    transition: background-color 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  user-select: none;
+  transition: background-color 0.3s;
 }
 
 .prev {
-    left: 0;
-    border-radius: 0 3px 3px 0;
+  left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
