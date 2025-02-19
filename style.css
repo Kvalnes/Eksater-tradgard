@@ -223,3 +223,10 @@ p {
   font-size: 16px;
 }
 
+
+/* ===== LISTOR =========== */
+
+ul {
+  list-style: none;
+}
+
