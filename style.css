@@ -190,6 +190,8 @@ p {
 }
 
 .main-nav a {
+  
+  list-style: none;      /* Ta bort punkter */
   text-decoration: none;
   color: #4a7729;        /* Exempel på grön färg */
   font-size: 18px;
