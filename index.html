@@ -4,247 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eksäter Trädgård AB</title>
-  <style>
-    /* Grundinställningar för sidan */
-    body {
-      /* Bakgrundsbild från GitHub-repot, justera sökväg vid behov */
-      background-image: url('https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background.jpg?raw=true');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Georgia', serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f5f0; /* Fallback-färg om bilden inte laddas */
-    }
-
-    /* Huvudbehållare för innehållet */
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #f2ead2; /* Varm, beige bakgrund */
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    /* Loggan */
-    .logo {
-      max-width: 300px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 50%;
-    }
-
-    /* Rubriker och text */
-    h1 {
-      color: #4a7729;
-      font-size: 36px;
-      font-weight: bold;
-      margin-top: 0; /* Tar bort ev. extra avstånd uppåt */
-    }
-    p {
-      font-size: 20px;
-      color: #333;
-    }
-
-    /* Kontaktsektionen */
-    .contact {
-      margin-top: 20px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #4a7729;
-    }
-    .contact a {
-      color: #4a7729;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Sociala länkar och extern länk */
-    .social-links, .external-link, .about-link {
-      margin-top: 20px;
-    }
-    .social-links a, .external-link a, .about-link a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: white;
-      border-radius: 5px;
-    }
-    .instagram { background-color: #E4405F; }
-    .facebook  { background-color: #1877F2; }
-    .external-link a {
-      color: #4a7729;
-      font-weight: bold;
-      background-color: transparent;
-      border: 2px solid #4a7729;
-    }
-
-    /* Ny knapp för about.html (kan stylas som du vill) */
-    .about-link a {
-      background-color: #4a7729; /* Samma gröna ton som rubriken */
-      color: #fff;
-      border: none;
-    }
-
-    /* Bildgalleri / slider */
-    .image-gallery {
-      position: relative;
-      max-width: 1000px;
-      margin: 40px auto;
-    }
-    .gallery-slide {
-      display: none;
-      width: 80%;           /* Justera bredden enligt behoven */
-      max-width: 1000px;
-      max-height: 600px;
-      margin: 0 auto;
-      border-radius: 10px;
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-    }
-
-    /* Pilarna */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
-      width: auto;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 3px;
-      user-select: none;
-    }
-    .prev {
-      left: 0;
-      border-radius: 0 3px 3px 0;
-    }
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  </style>
+  <!-- Länka till din style.css -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="container">
-    <!-- Logga -->
+    <!-- LOGGA -->
     <img 
       src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" 
       alt="Eksäter Trädgård" 
       class="logo"
     >
-    
-    <!-- Rubrik och beskrivning -->
+
+    <!-- RUBRIK & TEXT -->
     <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
     <p>Bland grönskande fält och blomstrande trädgårdar – en plats för inspiration och lugn.</p>
 
-    <!-- Kontaktinformation -->
+    <!-- KONTAKT -->
     <div class="contact">
-      📞 <strong>Kontakta oss:</strong> <a href="tel:0701234567">070-1234567</a>
+      📞 <strong>Kontakta oss:</strong> 
+      <a href="tel:0701234567">070-1234567</a>
     </div>
 
-    <!-- Sociala medier -->
+    <!-- SOCIALA MEDIER -->
     <div class="social-links">
-      <a href="https://www.instagram.com/eksater_tradgard/" class="instagram" target="_blank">📷 Följ oss på Instagram</a>
-      <a href="https://www.facebook.com/eksatertradgard" class="facebook" target="_blank">📘 Följ oss på Facebook</a>
+      <a href="https://www.instagram.com/eksater_tradgard/" class="instagram" target="_blank">
+        📷 Följ oss på Instagram
+      </a>
+      <a href="https://www.facebook.com/eksatertradgard" class="facebook" target="_blank">
+        📘 Följ oss på Facebook
+      </a>
     </div>
 
-    <!-- Extern länk (Trädgårdsresan) -->
+    <!-- EXTERN LÄNK TILL TRÄDGÅRDSRESAN -->
     <div class="external-link">
-      📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
+      📖 
+      <a 
+        href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" 
+        target="_blank"
+      >
+        Läs mer om oss på Trädgårdsresan
+      </a>
     </div>
 
-    <!-- Ny knapp till about.html -->
+    <!-- EV. KNAPP TILL ABOUT.HTML -->
+    <!-- 
     <div class="about-link">
       <a href="about.html">Läs mer om oss</a>
     </div>
+    -->
 
-    <!-- Bildgalleri (slider) -->
+    <!-- BILDGALLERI (FADE SLIDER) -->
     <div class="image-gallery">
+      <!-- PILAR -->
       <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-      
-    <!-- Varje bild läggs i en div.gallery-slide -->
-  <div class="gallery-slide">
-    <img src="https://via.placeholder.com/1200x800/91C788/fff?text=Bild+1" alt="Trädgårdsbild 1">
-  </div>
-  <div class="gallery-slide">
-    <img src="https://via.placeholder.com/1200x800/FE6D73/fff?text=Bild+2" alt="Trädgårdsbild 2">
-  </div>
-  <div class="gallery-slide">
-    <img src="https://via.placeholder.com/1200x800/FFD166/333?text=Bild+3" alt="Trädgårdsbild 3">
-  </div>
-  <div class="gallery-slide">
-    <img src="https://via.placeholder.com/1200x800/70C1B3/333?text=Bild+4" alt="Trädgårdsbild 4">
-  </div>
 
-  <button class="next" onclick="plusSlides(1)">&#10095;</button>
-</div>
+      <!-- BILDER I SLIDERN -->
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
+          alt="Trädgårdsbild 1"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" 
+          alt="Trädgårdsbild 2"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" 
+          alt="Trädgårdsbild 3"
+        >
+      </div>
+      <div class="gallery-slide">
+        <img 
+          src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" 
+          alt="Lökodling"
+        >
+      </div>
 
-<script>
-  // Hämta alla slides och håll koll på vilken som är aktiv
-  let slideIndex = 0;
-  const slides = document.getElementsByClassName("gallery-slide");
-
-  // Visa vald bild (lägger på 'active' för fade-in)
-  function showSlide(index) {
-    // Dölj alla bilder
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].classList.remove('active');
-    }
-    // Visa den valda bilden
-    slides[index].classList.add('active');
-  }
-
-  // Flytta framåt/bakåt i bildlistan
-  function plusSlides(n) {
-    slideIndex += n;
-    // Om vi går förbi sista bilden, gå till första
-    if (slideIndex >= slides.length) {
-      slideIndex = 0;
-    }
-    // Om vi går före första bilden, gå till sista
-    if (slideIndex < 0) {
-      slideIndex = slides.length - 1;
-    }
-    showSlide(slideIndex);
-  }
-
-  // Initiera genom att visa första bilden
-  showSlide(slideIndex);
-</script>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
   </div>
 
-  <!-- JavaScript för bildslidern -->
+  <!-- SCRIPT FÖR SLIDERN (FADE) -->
   <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("gallery-slide");
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      let slides = document.getElementsByClassName("gallery-slide");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
+    // Visa vald slide
+    function showSlide(index) {
+      // Dölj alla slides
       for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove("active");
       }
-      slides[slideIndex - 1].style.display = "block";
+      // Visa den valda
+      slides[index].classList.add("active");
     }
+
+    // Navigera i slidern
+    function plusSlides(n) {
+      slideIndex += n;
+      // Om vi går förbi sista bilden, gå till första
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+      // Om vi går före första bilden, gå till sista
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
+      showSlide(slideIndex);
+    }
+
+    // Initiera med första bilden
+    showSlide(slideIndex);
   </script>
 </body>
 </html>
