@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kontakta oss</h1>
+        <p>Har du frågor? Hör av dig till oss!</p>
+
+        <div class="contact">
+            📞 <strong>Telefon:</strong> <a href="tel:0701234567">070-1234567</a>
+            <br>
+            ✉️ <strong>E-post:</strong> <a href="mailto:info@eksatertradgard.se">info@eksatertradgard.se</a>
+        </div>
+
+        <nav>
+            <a href="index.html">Hem</a>
+            <a href="about.html">Om oss</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </div>
+
+</body>
+</html>
