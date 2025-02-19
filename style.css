@@ -15,14 +15,16 @@ html, body {
 
 /* ====== HUVUD-BEHÅLLARE ====== */
 .container {
-   position: absolute;
-  top: 50px;          /* 50px från toppen */
-  bottom: 20px;       /* 20px från botten */
+    position: absolute;
+  top: 50px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 1000px;
   background: #f2ead2;
-  overflow-y: auto;   /* För att kunna scrolla inom containern om innehållet blir för stort */
+  overflow-y: auto; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ====== LOGGA ====== */
