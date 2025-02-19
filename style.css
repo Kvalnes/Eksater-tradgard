@@ -6,7 +6,7 @@ html, body {
   text-align: center;
   
   /* Bakgrundsbild och fallback-färg */
-  background-image: url('bilder/background02.jpg');
+  background-image: url("https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background02.jpg?raw=true");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
