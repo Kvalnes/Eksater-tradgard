@@ -54,6 +54,11 @@ p {
   color: #4a7729;
 }
 
+/* Symboler i kontaktsektionen */
+.symbol {
+  color: #4a7729; /* Grön färg */
+}
+
 .contact a {
   color: #4a7729;
   text-decoration: none;
