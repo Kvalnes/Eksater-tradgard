@@ -15,6 +15,7 @@ html, body {
 
 /* ====== CONTAINER ====== */
 .container {
+  border: 2px solid red;
   max-width: 800px;   /* Gör den beiga rutan smalare än 1000px */
   width: 90%;         /* Responsiv på små skärmar */
   margin: 50px auto;  /* 50px upp/ned, auto centrerar horisontellt */
