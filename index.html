@@ -143,6 +143,7 @@
             📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
         </div>
 
+        <!--
         <div class="image-gallery">
             <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
             <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" alt="Trädgårdsbild 1">
@@ -169,6 +170,53 @@
                 }
                 slides[slideIndex - 1].style.display = "block";
             }
+
+        -->
+
+                
+            <!-- Ny lösning: Manuell bildbläddring med ett enda bild-element -->
+            <div class="image-gallery">
+              <button class="prev" onclick="showPrev()">&#10094;</button>
+              <img 
+                id="galleryImage" 
+                src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" 
+                alt="Bild" 
+                style="width:80%; max-height:600px; border-radius:10px; box-shadow: 0px 2px 5px rgba(0,0,0,0.2);"
+              >
+              <button class="next" onclick="showNext()">&#10095;</button>
+            </div>
+            
+            <script>
+              // Array med bild-URL:er
+              const images = [
+                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true",
+                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true",
+                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true",
+                "https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true"
+              ];
+              
+              let currentIndex = 0;
+              
+              // Funktion som visar en bild baserat på index
+              function showImage(index) {
+                const galleryImage = document.getElementById("galleryImage");
+                galleryImage.src = images[index];
+              }
+              
+              // Nästa bild
+              function showNext() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+              }
+              
+              // Föregående bild
+              function showPrev() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+              }
+            </script>
+        
+        
         </script>
     </div>
 </body>
