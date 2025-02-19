@@ -6,14 +6,14 @@
     <title>Eksäter Trädgård AB</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #f9f5f0;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
             background: white;
@@ -21,17 +21,24 @@
             border-radius: 10px;
         }
         .logo {
-            max-width: 150px;
+            max-width: 200px;
             display: block;
             margin: 20px auto;
             border-radius: 50%;
         }
-        h1 { color: green; }
-        p { font-size: 18px; }
-        .social-links {
+        h1 {
+            color: #4a7729;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+        .social-links, .external-link {
             margin-top: 20px;
         }
-        .social-links a {
+        .social-links a, .external-link a {
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
@@ -42,36 +49,46 @@
         }
         .instagram { background-color: #E4405F; }
         .facebook { background-color: #1877F2; }
-        .external-link {
-            margin-top: 20px;
-            font-size: 18px;
-        }
         .external-link a {
-            color: blue;
-            text-decoration: none;
+            color: #4a7729;
             font-weight: bold;
+            background-color: transparent;
+            border: 2px solid #4a7729;
         }
         .contact {
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #4a7729;
         }
         .contact a {
-            color: green;
+            color: #4a7729;
             text-decoration: none;
             font-weight: bold;
         }
-        .image-gallery {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .image-gallery img {
+        .slider-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            width: 400%;
+            animation: slide 15s infinite;
+        }
+        .slider img {
+            width: 100%;
             border-radius: 10px;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        }
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0%); }
         }
     </style>
 </head>
@@ -80,11 +97,10 @@
     <div class="container">
         <img src="/mnt/data/122371316_359657441948349_8401758293206356101_n.jpg" alt="Eksäter Trädgård" class="logo">
         <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
-        <p>Besöksträdgård i Halland.</p>
-        <p>Större sällskap bokas på eksatertradgard@gmail.com eller slå en signal!</p>
+        <p>Bland grönskande fält och blomstrande trädgårdar – en plats för inspiration och lugn.</p>
 
         <div class="contact">
-            📞 <strong>Kontakta oss:</strong> <a href="tel: 079 347 55 39">079 347 55 39</a>
+            📞 <strong>Kontakta oss:</strong> <a href="tel:0701234567">070-1234567</a>
         </div>
 
         <div class="social-links">
@@ -96,15 +112,16 @@
             📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
         </div>
 
-        <div class="image-gallery">
-    <h2>Våra senaste projekt:</h2>
-    <img src="https://raw.githubusercontent.com/ditt-github-användarnamn/eksater-tradgard/main/bilder/natur01.jpeg" alt="Trädgårdsbild 1">
-    <img src="https://raw.githubusercontent.com/ditt-github-användarnamn/eksater-tradgard/main/bilder/natur02.jpeg" alt="Trädgårdsbild 2">
-    <img src="https://raw.githubusercontent.com/ditt-github-användarnamn/eksater-tradgard/main/bilder/454411474_1659196074655811_2137071344427012044_n.webp" alt="Trädgårdsbild 3">
-    <img src="https://raw.githubusercontent.com/ditt-github-användarnamn/eksater-tradgard/main/bilder/lök01.jpeg" alt="Lökodling">
-</div>
-
+        <div class="slider-container">
+            <div class="slider">
+                <img src="/mnt/data/natur01.jpeg" alt="Trädgårdsbild 1">
+                <img src="/mnt/data/natur02.jpeg" alt="Trädgårdsbild 2">
+                <img src="/mnt/data/454411474_1659196074655811_2137071344427012044_n.webp" alt="Trädgårdsbild 3">
+                <img src="/mnt/data/lök01.jpeg" alt="Lökodling">
+            </div>
+        </div>
     </div>
 
 </body>
 </html>
+
