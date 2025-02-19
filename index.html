@@ -24,8 +24,9 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
+        /* Öka storleken på loggan */
         .logo {
-            max-width: 200px;
+            max-width: 300px; /* Ändra från 200px till 300px */
             display: block;
             margin: 20px auto;
             border-radius: 50%;
@@ -70,34 +71,52 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Bildgalleri */
         .image-gallery {
             position: relative;
             max-width: 1000px;
             margin: auto;
         }
+        /* Minska bildstorleken och sätt max-höjd */
         .gallery-slide {
             display: none;
-            width: 100%;
+            width: 80%;           /* Minska till 80% av containern */
+            height: auto;
+            max-height: 500px;    /* Begränsa höjden till 500px (valfri siffra) */
+            margin: 0 auto;       /* Centrera bilden horisontellt */
             border-radius: 10px;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
         }
+        /* Pilarna */
         .prev, .next {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 50%;                         /* Centrera vertikalt */
+            transform: translateY(-50%);      /* Justera för att hamna mitt i bilden */
+            z-index: 1;                       /* Pilarna syns ovanpå bilderna */
             width: auto;
             padding: 16px;
-            margin-top: -22px;
             color: white;
             font-weight: bold;
             font-size: 18px;
             transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
             background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            user-select: none;
+        }
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
         }
         .next {
             right: 0;
             border-radius: 3px 0 0 3px;
+        }
+        /* Valfritt: Gör pilarna mer synliga när man hovrar över galleriet */
+        .image-gallery:hover .prev,
+        .image-gallery:hover .next {
+            opacity: 1;
         }
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
