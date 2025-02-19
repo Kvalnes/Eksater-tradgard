@@ -9,7 +9,7 @@ html, body {
   background-image: url("https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background.jpg?raw=true");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-color: #f9f5f0; /* Om bilden inte laddas */
 }
 
