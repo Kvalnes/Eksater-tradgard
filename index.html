@@ -70,34 +70,41 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .slider-container {
-            width: 100%;
-            max-width: 900px;
-            margin: auto;
-            overflow: hidden;
+        .image-gallery {
             position: relative;
+            max-width: 1000px;
+            margin: auto;
         }
-        .slider {
-            display: flex;
-            width: 400%;
-            animation: slide 15s infinite;
-        }
-        .slider img {
+        .gallery-slide {
+            display: none;
             width: 100%;
             border-radius: 10px;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
         }
-        @keyframes slide {
-            0% { transform: translateX(0%); }
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            100% { transform: translateX(0%); }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/122371316_359657441948349_8401758293206356101_n.jpg?raw=true" alt="Eksäter Trädgård" class="logo">
         <h1>Välkommen till Eksäter Trädgård AB! 🌿</h1>
@@ -116,16 +123,34 @@
             📖 <a href="https://tradgardsresan.se/sv/tradgardarna/eksater-tradgard-varberg" target="_blank">Läs mer om oss på Trädgårdsresan</a>
         </div>
 
-        <div class="slider-container">
-            <div class="slider">
-                <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" alt="Trädgårdsbild 1">
-                <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" alt="Trädgårdsbild 2">
-                <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" alt="Trädgårdsbild 3">
-                <img src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" alt="Lökodling">
-            </div>
+        <div class="image-gallery">
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur01.jpeg?raw=true" alt="Trädgårdsbild 1">
+            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/natur/natur02.jpeg?raw=true" alt="Trädgårdsbild 2">
+            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/vatten/454411474_1659196074655811_2137071344427012044_n.webp?raw=true" alt="Trädgårdsbild 3">
+            <img class="gallery-slide" src="https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/grönsaker_ish/lök01.jpeg?raw=true" alt="Lökodling">
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
-    </div>
 
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("gallery-slide");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
+    </div>
 </body>
 </html>
 
