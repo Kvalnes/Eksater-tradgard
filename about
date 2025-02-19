@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Eksäter Trädgård AB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Om oss</h1>
+        <p>Eksäter Trädgård AB är specialiserade på trädgårdsskötsel och landskapsdesign.</p>
+
+        <nav>
+            <a href="index.html">Hem</a>
+            <a href="about.html">Om oss</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </div>
+
+</body>
+</html>
