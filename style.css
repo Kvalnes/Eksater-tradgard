@@ -2,9 +2,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  text-align: center;
   font-family: 'Georgia', serif;
+  text-align: center;
+
   /* Bakgrundsbild och fallback-färg */
   background-image: url("https://github.com/Kvalnes/Eksater-tradgard/blob/main/bilder/background.jpg?raw=true");
   background-size: cover;
@@ -13,12 +13,11 @@ html, body {
   background-color: #f9f5f0; /* Om bilden inte laddas */
 }
 
-/* ====== HUVUD-BEHÅLLARE ====== */
+/* ====== CONTAINER ====== */
 .container {
-
-  max-width: 1000px;   /* eller 800px om du vill smalna av mer */
-  width: 90%;          /* gör den responsiv på små skärmar */
-  margin: 50px auto;   /* 50px upptill och nertill, auto centrerar horisontellt */
+  max-width: 800px;   /* Gör den beiga rutan smalare än 1000px */
+  width: 90%;         /* Responsiv på små skärmar */
+  margin: 50px auto;  /* 50px upp/ned, auto centrerar horisontellt */
   padding: 20px;
   background: #f2ead2;
   border-radius: 10px;
@@ -38,7 +37,7 @@ h1 {
   color: #4a7729;
   font-size: 36px;
   font-weight: bold;
-  margin-top: 0; /* Ta bort extra marginal upptill */
+  margin-top: 0; /* Ta bort ev. extra marginal upptill */
 }
 
 p {
@@ -59,13 +58,12 @@ p {
   text-decoration: none;
 }
 
-/* ====== SOCIALA LÄNKAR & EXTERN LÄNK ====== */
-.social-links, .external-link {
+/* ====== SOCIALA LÄNKAR ====== */
+.social-links {
   margin-top: 20px;
 }
 
-.social-links a,
-.external-link a {
+.social-links a {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
@@ -75,7 +73,6 @@ p {
   border-radius: 5px;
 }
 
-/* Instagram och Facebook */
 .instagram {
   background-color: #E4405F;
 }
@@ -83,63 +80,31 @@ p {
   background-color: #1877F2;
 }
 
-/* Länk till Trädgårdsresan */
-.external-link a {
-  color: #4a7729;              /* Grön text */
-  font-weight: bold;
-  background-color: transparent;
-  border: 2px solid #4a7729;   /* Grön kant */
-}
-
-/* ====== SLIDER-KNAPP TILL "ABOUT" (om du vill ha en intern länk) ====== */
-.about-link {
-  margin-top: 20px;
-}
-.about-link a {
-  background-color: #4a7729;
-  color: #fff;
-  border: none;
-  font-size: 18px;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-
-/* ====== SLIDER (FADE-EFFEKT) ====== */
+/* ====== SLIDER (FADE) ====== */
 .image-gallery {
-  position: relative;
-  max-width: 1000px;
   margin: 40px auto;
-  min-height: 500px; /* Hindrar layout-hopp om bilder varierar i höjd */
+  position: relative; /* Pilar kan vara absoluta mot denna */
 }
 
-/* Varje bild-lager (slide) placeras ovanpå varandra */
+/* Varje bild-lager är osynligt som standard (display: none; opacity: 0;) */
 .gallery-slide {
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0;
-  margin: 0 auto;
-  width: 80%;
-  max-width: 1000px;
+  display: none;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Aktiv bild får opacity=1 (synlig) */
+/* Aktiv bild får display: block; opacity: 1; */
 .gallery-slide.active {
+  display: block;
   opacity: 1;
-  z-index: 1;
 }
 
-/* Själva bilden inuti varje slide */
+/* Bilderna behåller proportioner och anpassar sig till containerns bredd */
 .gallery-slide img {
   width: 100%;
-  height: auto; /* Behåll proportioner */
-  display: block;
+  height: auto;
   border-radius: 10px;
+  display: block;
 }
 
 /* Pilarna */
@@ -149,12 +114,11 @@ p {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  width: auto;
   padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   border-radius: 3px;
   user-select: none;
   transition: background-color 0.3s;
@@ -164,12 +128,49 @@ p {
   left: 0;
   border-radius: 0 3px 3px 0;
 }
-
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0,0,0,0.8);
 }
+
+/* ====== LÄNKAR UNDER SLIDER ====== */
+.links-below-slider {
+  margin-top: 20px;
+}
+
+.links-below-slider a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Grön knapp (about) */
+.about-button {
+  background-color: #4a7729;
+  color: #fff;
+}
+
+.about-button:hover {
+  background-color: #3b5e23;
+}
+
+/* Länk med grön kant (Trädgårdsresan) */
+.external-button {
+  color: #4a7729;
+  background-color: transparent;
+  border: 2px solid #4a7729;
+  font-weight: bold;
+}
+
+.external-button:hover {
+  background-color: #4a7729;
+  color: #fff;
+}
+
