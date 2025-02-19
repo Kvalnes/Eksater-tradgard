@@ -15,15 +15,12 @@ html, body {
 
 /* ====== HUVUD-BEHÅLLARE ====== */
 .container {
-    position: absolute;
-  top: 50px;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px; width: 90%;
-  min-height: 100vh;
+
+  max-width: 1000px;   /* eller 800px om du vill smalna av mer */
+  width: 90%;          /* gör den responsiv på små skärmar */
+  margin: 50px auto;   /* 50px upptill och nertill, auto centrerar horisontellt */
+  padding: 20px;
   background: #f2ead2;
-  overflow-y: auto; 
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
