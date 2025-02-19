@@ -103,6 +103,8 @@ p {
 .gallery-slide.active {
   display: block;
   opacity: 1;
+  background-color: rgba(255, 0, 0, 0.1); /* Tillfällig röd bakgrundsfärg */
+  border: 1px dashed red;
 }
 
 /* Bilderna behåller proportioner och anpassar sig till containerns bredd */
