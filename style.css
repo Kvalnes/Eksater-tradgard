@@ -10,7 +10,7 @@ html, body {
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
-  background-color: #f9f5f0; /* Om bilden inte laddas */
+  background-color: #b8a58d; /* Om bilden inte laddas */
 }
 
 /* ====== CONTAINER ====== */
