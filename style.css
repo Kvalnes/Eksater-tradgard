@@ -1,7 +1,8 @@
 /* ====== GRUNDINSTÄLLNINGAR ====== */
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   text-align: center;
   font-family: 'Georgia', serif;
   /* Bakgrundsbild och fallback-färg */
